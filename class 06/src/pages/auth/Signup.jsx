@@ -2,7 +2,7 @@ import { Box, Button, CircularProgress, Stack, TextField, Typography } from '@mu
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { auth } from '../firebase'
+import { auth } from '../../firebase'
 import { Bounce, toast } from 'react-toastify'
 
 const Signup = () => {

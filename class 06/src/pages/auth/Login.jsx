@@ -2,8 +2,9 @@ import { Box, Button, CircularProgress, Stack, TextField, Typography } from '@mu
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { auth } from '../firebase'
-import { ToastAlert } from '../utils'
+import { auth } from '../../firebase'
+import { ToastAlert } from '../../utils'
+import styles from "./login.module.css"
 
 const Login = () => {
 
@@ -42,7 +43,7 @@ const Login = () => {
 
         <Stack justifyContent={"center"} alignItems={"center"} sx={{ border: "1px solid red", minHeight: "100vh" }} >
             <Stack colo gap={5} sx={{ border: "1px solid black", width: "50%", p: 5 }} >
-                <Typography variant='h3' >Login</Typography>
+                <Typography variant='h3' className={styles.heading} >Login</Typography>
 
                 <TextField label="Email Address" variant="outlined"
                     onChange={(e) => setEmail(e.target.value)}
